@@ -11,8 +11,9 @@ class CatsController < ApplicationController
             render json: cat
         else
             render json: cat.errors, status: 422
-        end
+        end 
     end
+    
     def update
         cat = Cat.find(params[:id])
         cat.update(cat_params)
